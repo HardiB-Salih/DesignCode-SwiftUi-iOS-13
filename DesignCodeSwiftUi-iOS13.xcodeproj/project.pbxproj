@@ -11,6 +11,10 @@
 		8D0CA91428B0ED9E00A81E27 /* CustomSnippit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CA91328B0ED9E00A81E27 /* CustomSnippit.swift */; };
 		8D0CA91628B117FF00A81E27 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CA91528B117FE00A81E27 /* Home.swift */; };
 		8D6AB88E28B2497400576769 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6AB88D28B2497400576769 /* HomeView.swift */; };
+		8DBB6C2628B2990A009E33E9 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB6C2528B2990A009E33E9 /* UpdateList.swift */; };
+		8DBB6C2828B29FC1009E33E9 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB6C2728B29FC1009E33E9 /* UpdateDetail.swift */; };
+		8DBB6C2A28B2C362009E33E9 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB6C2928B2C362009E33E9 /* UpdateStore.swift */; };
+		8DBB6C2C28B2C93A009E33E9 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB6C2B28B2C93A009E33E9 /* TabBar.swift */; };
 		8DD1CE7D28AFE84300D7DB6C /* DesignCodeSwiftUi_iOS13App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1CE7C28AFE84300D7DB6C /* DesignCodeSwiftUi_iOS13App.swift */; };
 		8DD1CE7F28AFE84300D7DB6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1CE7E28AFE84300D7DB6C /* ContentView.swift */; };
 		8DD1CE8128AFE84700D7DB6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DD1CE8028AFE84700D7DB6C /* Assets.xcassets */; };
@@ -22,6 +26,10 @@
 		8D0CA91328B0ED9E00A81E27 /* CustomSnippit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSnippit.swift; sourceTree = "<group>"; };
 		8D0CA91528B117FE00A81E27 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		8D6AB88D28B2497400576769 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8DBB6C2528B2990A009E33E9 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
+		8DBB6C2728B29FC1009E33E9 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
+		8DBB6C2928B2C362009E33E9 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
+		8DBB6C2B28B2C93A009E33E9 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		8DD1CE7928AFE84300D7DB6C /* DesignCodeSwiftUi-iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DesignCodeSwiftUi-iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD1CE7C28AFE84300D7DB6C /* DesignCodeSwiftUi_iOS13App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeSwiftUi_iOS13App.swift; sourceTree = "<group>"; };
 		8DD1CE7E28AFE84300D7DB6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +72,10 @@
 				8D0CA91528B117FE00A81E27 /* Home.swift */,
 				8D6AB88D28B2497400576769 /* HomeView.swift */,
 				8D0CA91128B0E3F100A81E27 /* MenuView.swift */,
+				8DBB6C2528B2990A009E33E9 /* UpdateList.swift */,
+				8DBB6C2728B29FC1009E33E9 /* UpdateDetail.swift */,
+				8DBB6C2928B2C362009E33E9 /* UpdateStore.swift */,
+				8DBB6C2B28B2C93A009E33E9 /* TabBar.swift */,
 				8DD1CE8028AFE84700D7DB6C /* Assets.xcassets */,
 				8DD1CE8228AFE84700D7DB6C /* Preview Content */,
 				8D0CA91328B0ED9E00A81E27 /* CustomSnippit.swift */,
@@ -150,11 +162,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D0CA91428B0ED9E00A81E27 /* CustomSnippit.swift in Sources */,
+				8DBB6C2A28B2C362009E33E9 /* UpdateStore.swift in Sources */,
+				8DBB6C2628B2990A009E33E9 /* UpdateList.swift in Sources */,
 				8DD1CE7F28AFE84300D7DB6C /* ContentView.swift in Sources */,
+				8DBB6C2828B29FC1009E33E9 /* UpdateDetail.swift in Sources */,
 				8D0CA91228B0E3F100A81E27 /* MenuView.swift in Sources */,
 				8D6AB88E28B2497400576769 /* HomeView.swift in Sources */,
 				8D0CA91628B117FF00A81E27 /* Home.swift in Sources */,
 				8DD1CE7D28AFE84300D7DB6C /* DesignCodeSwiftUi_iOS13App.swift in Sources */,
+				8DBB6C2C28B2C93A009E33E9 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

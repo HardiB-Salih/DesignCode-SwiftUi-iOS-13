@@ -15,8 +15,7 @@ struct Home: View {
     
     var body: some View {
         ZStack {
-            Color(bgColor)
-                .edgesIgnoringSafeArea(.all)
+            Color(.white).ignoresSafeArea()
             HomeView(showProfile: $showProfile)
             .padding(.top, 44)
             .background(Color.white)
@@ -33,13 +32,13 @@ struct Home: View {
                 .offset(y: viewState.height)
                 .animation(.spring(response: 0.5, dampingFraction: 0.6), value: showProfile)
                 .onTapGesture {
-                    showProfile.toggle()
+                    self.showProfile.toggle()
                 }
                 .gesture(
                     DragGesture().onChanged { value in
                         viewState = value.translation
                         if viewState.height > 50 {
-                            showProfile = false
+                            self.showProfile = false
                         }
                     }.onEnded { value in
                         viewState = .zero
@@ -59,7 +58,7 @@ struct AvatarView: View {
     @Binding var showProfile : Bool
     var body: some View {
         Button(action: {
-            showProfile.toggle()
+            self.showProfile.toggle()
         }) {
             Image("avatar")
                 .renderingMode(.original)
