@@ -22,7 +22,7 @@ struct ContentView: View {
                 .blur(radius: show ? 20 : 0)
                 .opacity(showCard ? 0.4 : 1)
                 .offset(y: showCard ? -200 : 0)
-                .animation(Animation.default.delay(0.1), value: showCard)
+//                .animation(Animation.default.delay(0.1), value: showCard)
             
             BackCardView()
                 .frame(width: showCard ? 300 : 340, height: 220)
@@ -79,12 +79,13 @@ struct ContentView: View {
                 }
                 )
             
-            BottomCardView()
+            BottomCardView(show: $showCard)
                 .offset(x: 0, y: showCard ? 400 : 1000)
                 .offset(y: bottomState.height)
                 .blur(radius: show ? 20 : 0)
-                .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8), value: showCard)
-                .animation(.spring(response: 0.3, dampingFraction: 0.6), value: bottomState)
+                .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8), value: self.showCard)
+                .animation(.spring(response: 0.3, dampingFraction: 0.6), value: self.bottomState)
+
                 .gesture(DragGesture().onChanged{ value in
                     bottomState = value.translation
                     if showFull {
@@ -177,6 +178,9 @@ struct TitleView: View {
 }
 
 struct BottomCardView: View {
+    var color1 = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+    var color2 = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
+    @Binding var show : Bool
     var body: some View {
         VStack (spacing: 20){
             Rectangle()
@@ -189,6 +193,22 @@ struct BottomCardView: View {
                 .multilineTextAlignment(.center)
                 .font(.subheadline)
                 .lineSpacing(4)
+                
+            
+            HStack(spacing: 20.0) {
+                RingView(color1: color1, color2: color2, width: 88, height: 88, percent: 74, show: $show)
+                VStack(alignment: .leading, spacing: 8.0) {
+                    Text("SwiftUI").bold()
+                    Text("12 of 12 section buddy you got it\n10 hours spend so far")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        .lineSpacing(4)
+                }
+                .padding(20)
+                .background(.white)
+                .cornerRadius(20)
+                .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
+            }
             Spacer()
         }
         .padding(.top, 8)
@@ -197,6 +217,7 @@ struct BottomCardView: View {
         .background(.white)
         .cornerRadius(30)
         .shadow(radius: 20)
+        
         
     }
 }
